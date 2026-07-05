@@ -14,8 +14,8 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             line-height: 1.7;
-            color: #333;
-            background-color: #fafafa;
+            color: #4A3728;
+            background-color: #FFF8E7;
         }
 
         .container {
@@ -32,39 +32,39 @@
         h1 {
             font-size: 32px;
             font-weight: 700;
-            color: #1a1a1a;
+            color: #4A3728;
             margin-bottom: 8px;
         }
 
         .subtitle {
-            color: #666;
+            color: #7A6555;
             font-size: 14px;
         }
 
         .last-updated {
-            color: #888;
+            color: #A69585;
             font-size: 13px;
             margin-top: 8px;
         }
 
         section {
-            background: white;
+            background: #FFF3D6;
             border-radius: 12px;
             padding: 32px;
             margin-bottom: 24px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            box-shadow: 0 1px 3px rgba(74,55,40,0.08);
         }
 
         h2 {
             font-size: 20px;
             font-weight: 600;
-            color: #1a1a1a;
+            color: #4A3728;
             margin-bottom: 16px;
         }
 
         p {
             margin-bottom: 16px;
-            color: #444;
+            color: #5A4738;
         }
 
         p:last-child {
@@ -78,12 +78,12 @@
 
         li {
             margin-bottom: 8px;
-            color: #444;
+            color: #5A4738;
         }
 
         .highlight {
-            background: #f0f7ff;
-            border-left: 4px solid #6B5CE7;
+            background: #FFE8BE;
+            border-left: 4px solid #E8A54B;
             padding: 16px 20px;
             border-radius: 0 8px 8px 0;
             margin: 20px 0;
@@ -91,18 +91,18 @@
 
         .highlight p {
             margin: 0;
-            color: #333;
+            color: #4A3728;
         }
 
         .contact {
             text-align: center;
             padding: 24px;
-            background: #f5f5f5;
+            background: #FFE8BE;
             border-radius: 12px;
         }
 
         .contact a {
-            color: #6B5CE7;
+            color: #D4956A;
             text-decoration: none;
         }
 
@@ -113,7 +113,7 @@
         footer {
             text-align: center;
             padding: 32px 0;
-            color: #888;
+            color: #A69585;
             font-size: 13px;
         }
     </style>
@@ -137,13 +137,24 @@
 
         <section>
             <h2>Data Storage</h2>
-            <p>All your data is stored <strong>locally on your device</strong>:</p>
+            <p>All your journal entries are stored <strong>securely on your device</strong>:</p>
             <ul>
-                <li>Voice recordings are processed on-device using iOS's built-in speech recognition</li>
-                <li>Transcribed text is saved only to your device's local storage</li>
-                <li>No data is uploaded to our servers or any third-party services</li>
+                <li>Your transcribed journal entries are encrypted using your device's secure storage (iOS Keychain / Android Keystore)</li>
+                <li>No journal data is uploaded to our servers</li>
+                <li>When you delete the app, all your data is permanently removed from your device</li>
             </ul>
-            <p>When you delete the app, all your data is permanently removed from your device.</p>
+        </section>
+
+        <section>
+            <h2>Speech Recognition</h2>
+            <p>Unload uses your device's speech recognition capabilities to convert voice to text:</p>
+            <ul>
+                <li><strong>On iOS:</strong> Speech recognition uses Apple's Speech framework. Depending on your device and iOS version, audio may be processed on-device or sent to Apple's servers for processing. Apple's privacy policy applies to this data.</li>
+                <li><strong>On Android:</strong> Speech recognition typically uses Google's Speech-to-Text service, which means your audio may be sent to Google's servers for processing. Google's privacy policy applies to this data.</li>
+            </ul>
+            <div class="highlight">
+                <p><strong>Important:</strong> While the speech recognition process may involve third-party services (Apple/Google), your final transcribed journal entries are stored only on your device and are never sent to our servers.</p>
+            </div>
         </section>
 
         <section>
@@ -163,15 +174,20 @@
             <h2>Permissions</h2>
             <p>Unload requests the following permissions:</p>
             <ul>
-                <li><strong>Microphone:</strong> Required to record your voice. Audio is processed locally and never leaves your device.</li>
-                <li><strong>Speech Recognition:</strong> Required to convert your voice to text. This uses Apple's on-device speech recognition technology.</li>
+                <li><strong>Microphone:</strong> Required to record your voice for transcription.</li>
+                <li><strong>Speech Recognition:</strong> Required to convert your voice to text using your device's speech recognition service.</li>
             </ul>
             <p>You can revoke these permissions at any time in your device's Settings.</p>
         </section>
 
         <section>
-            <h2>Data Backup</h2>
-            <p>If you have iCloud Backup enabled on your device, your Unload data may be included in your device backup. This backup is encrypted and managed by Apple according to their privacy policy.</p>
+            <h2>Data Security</h2>
+            <p>Your journal entries are encrypted using industry-standard encryption:</p>
+            <ul>
+                <li><strong>iOS:</strong> Data is stored in the iOS Keychain, protected by hardware encryption</li>
+                <li><strong>Android:</strong> Data is stored in the Android Keystore, protected by hardware-backed security</li>
+            </ul>
+            <p>Your encrypted data may be included in device backups (iCloud/Google) according to your backup settings. These backups are managed by Apple/Google according to their respective privacy policies.</p>
         </section>
 
         <section>
